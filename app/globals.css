@@ -5,14 +5,15 @@
   --color-brand-dark: #1a3d1b;
   --color-brand-text: #ffffff;
   --color-accent: #f5e6c8;
-  --font-heading: Georgia, serif;
-  --font-body: system-ui, sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 body {
   font-family: var(--font-body);
   color: #1a1a1a;
   background: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
