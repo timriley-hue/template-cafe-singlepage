@@ -1,0 +1,38 @@
+name: Protect site structure
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for structural changes
+        run: |
+          # Allow bypass with [structure] in the PR title
+          if echo "${{ github.event.pull_request.title }}" | grep -qi '\[structure\]'; then
+            echo "Structural change explicitly flagged — skipping check."
+            exit 0
+          fi
+
+          # Get list of changed files in this PR
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+
+          # Check if any changed file is outside /content/
+          STRUCTURAL=$(echo "$CHANGED" | grep -v '^content/' || true)
+
+          if [ -n "$STRUCTURAL" ]; then
+            echo ""
+            echo "❌ Structural files changed without [structure] flag in PR title:"
+            echo "$STRUCTURAL"
+            echo ""
+            echo "If this is intentional, add [structure] to the PR title."
+            exit 1
+          fi
+
+          echo "✅ Only content files changed — all good."

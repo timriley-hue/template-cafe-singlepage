@@ -1,0 +1,8 @@
+{
+  "hours": [
+    { "days": "Monday – Friday", "open": "08:00", "close": "17:00" },
+    { "days": "Saturday",        "open": "08:30", "close": "17:00" },
+    { "days": "Sunday",          "open": "09:00", "close": "16:00" }
+  ],
+  "notes": "Closed bank holidays."
+}

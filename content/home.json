@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "headline": "Good coffee. No fuss.",
+    "subheading": "Open seven days a week in the heart of Tenterden."
+  },
+  "faq": [
+    {
+      "question": "Where can I park?",
+      "answer": "There is a free car park on Recreation Ground Road, about a two-minute walk from the door."
+    },
+    {
+      "question": "Do you cater for dietary requirements?",
+      "answer": "Yes. We have plant-based milk options, gluten-free cakes, and vegetarian food. Ask us if you're not sure about something."
+    },
+    {
+      "question": "Can I book a table?",
+      "answer": "We're walk-in only. On busy weekend mornings there can be a short wait, but it's usually quick."
+    },
+    {
+      "question": "Do you have Wi-Fi?",
+      "answer": "Yes. Ask at the counter for the password."
+    }
+  ]
+}

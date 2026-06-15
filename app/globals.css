@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2c5f2e;
+  --color-brand-dark: #1a3d1b;
+  --color-brand-text: #ffffff;
+  --color-accent: #f5e6c8;
+  --font-heading: Georgia, serif;
+  --font-body: system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1a1a1a;
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
+}

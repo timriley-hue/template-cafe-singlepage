@@ -1,0 +1,12 @@
+{
+  "name": "The Coffee House",
+  "tagline": "Great coffee, good people.",
+  "address": "1 High Street, Tenterden, Kent TN30 6AA",
+  "phone": "01580 000000",
+  "email": "hello@thecoffeehouse.co.uk",
+  "googlePlaceId": "ChIJvwtzZH4h30cRywK7Os46ds0",
+  "social": {
+    "instagram": "https://instagram.com/thecoffeehouse",
+    "facebook": "https://facebook.com/thecoffeehouse"
+  }
+}
