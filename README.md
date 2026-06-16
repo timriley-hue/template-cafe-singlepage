@@ -180,7 +180,26 @@ Edit `content/modules.json`:
 
 ---
 
-## Step 7 — Wire up the contact form
+## Step 7 — Set up the Food Hygiene Rating badge
+
+The footer automatically shows the client's live Food Hygiene Rating, pulled directly from the Food Standards Agency. It updates automatically whenever their rating changes — no manual work needed.
+
+Find their FHRS ID:
+1. Go to [ratings.food.gov.uk](https://ratings.food.gov.uk)
+2. Search for the business by name and town
+3. Open their listing — copy the number from the URL (e.g. `ratings.food.gov.uk/business/en-GB/123456` → ID is `123456`)
+
+Add it to `content/site.json`:
+
+```json
+"fhrsId": "123456"
+```
+
+Leave it empty (`""`) to hide the badge.
+
+---
+
+## Step 8 — Wire up the contact form
 
 The contact form HTML is ready in `app/page.tsx`. You need to connect it to a form handling service per client. Recommended options:
 
@@ -191,7 +210,7 @@ This is done when setting up the live site, not in the template.
 
 ---
 
-## Step 8 — Set up analytics
+## Step 9 — Set up analytics
 
 Add analytics when deploying — not in the template. Recommended:
 
@@ -200,7 +219,7 @@ Add analytics when deploying — not in the template. Recommended:
 
 ---
 
-## Step 9 — Review everything locally
+## Step 10 — Review everything locally
 
 Before deploying, go through the whole page on both desktop and mobile:
 
@@ -216,7 +235,7 @@ Before deploying, go through the whole page on both desktop and mobile:
 
 ---
 
-## Step 10 — Deploy to Vercel
+## Step 11 — Deploy to Vercel
 
 1. Push the client repo to GitHub if not already
 2. Go to [vercel.com](https://vercel.com) → **Add New Project** → Import the repo
@@ -228,7 +247,7 @@ Vercel gives you a preview URL immediately (e.g. `cafe-the-coffee-house.vercel.a
 
 ---
 
-## Step 11 — Connect the client's domain
+## Step 12 — Connect the client's domain
 
 1. In Vercel, go to the project → **Domains** → add their domain
 2. In their domain registrar (or Cloudflare), add the DNS records Vercel shows you
@@ -237,7 +256,7 @@ Vercel gives you a preview URL immediately (e.g. `cafe-the-coffee-house.vercel.a
 
 ---
 
-## Step 12 — Pre-launch checklist
+## Step 13 — Pre-launch checklist
 
 - [ ] All sections reviewed on mobile and desktop
 - [ ] Anchor nav links working

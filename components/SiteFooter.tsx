@@ -1,7 +1,8 @@
 import site from "@/content/site.json";
 import hours from "@/content/hours.json";
+import FoodHygieneBadge from "@/components/FoodHygieneBadge";
 
-export default function SiteFooter() {
+export default async function SiteFooter() {
   return (
     <footer className="bg-[var(--color-brand-dark)] text-[var(--color-brand-text)]">
       <div className="max-w-5xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
@@ -33,7 +34,7 @@ export default function SiteFooter() {
 
         <div>
           <p className="font-semibold mb-4 opacity-90">Follow us</p>
-          <div className="flex gap-5 opacity-60">
+          <div className="flex gap-5 opacity-60 mb-6">
             {site.social.instagram && (
               <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
                 Instagram
@@ -45,6 +46,7 @@ export default function SiteFooter() {
               </a>
             )}
           </div>
+          <FoodHygieneBadge />
         </div>
       </div>
 
